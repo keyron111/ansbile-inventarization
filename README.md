@@ -15,3 +15,5 @@
        src: /tmp/{{ ansible_hostname }}.txt
        dest: /root/PC_INFO/
        flat: yes
+
+ansible-playbook PC_INFO/collect_info.yaml
