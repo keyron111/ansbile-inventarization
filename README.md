@@ -6,12 +6,12 @@
   tasks:
    - name: Создаем файл с нужными данными
      сoру:
-      dest: /tmp/(( ansible_hostname }.txt
+      dest: /tmp/{{ ansible_hostname }}.txt
       content:
-       Hostname: ansible_hostname }}
-       IP Address: ({ ansible_default_ipu4.address
+       Hostname:{{ ansible_hostname }}
+       IP Address: ({ ansible_default_ipu4.address }}
    - name: Забираем файл с удаленного хоста.
      fetch:
-       src: /tmp/ff ansible_hostname }.txt
+       src: /tmp/{{ ansible_hostname }}.txt
        dest: /root/PC_INFO/
        flat: yes
