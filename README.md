@@ -1,7 +1,7 @@
 # ansbile-inventarization
 ![изображение](https://github.com/user-attachments/assets/b9d58f48-7fc6-4de5-b789-de3e86354185)
 - name: собираем PC name и IP address
-  hosts: hq-scrub hq-clip
+  hosts: hq-srv hq-cli
   gather_facts: true
   tasks:
    - name: Создаем файл с нужными данными
