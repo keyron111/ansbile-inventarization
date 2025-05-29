@@ -9,7 +9,7 @@
       dest: /tmp/{{ ansible_hostname }}.txt
       content: |
        Hostname:{{ ansible_hostname }}
-       IP Address: ({ ansible_default_ipu4.address }}
+       IP Address: ({ ansible_default_ipv4.address }}
    - name: Забираем файл с удаленного хоста.
      fetch:
        src: /tmp/{{ ansible_hostname }}.txt
