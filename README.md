@@ -7,7 +7,7 @@
    - name: Создаем файл с нужными данными
      сoру:
       dest: /tmp/{{ ansible_hostname }}.txt
-      content:
+      content: |
        Hostname:{{ ansible_hostname }}
        IP Address: ({ ansible_default_ipu4.address }}
    - name: Забираем файл с удаленного хоста.
